@@ -5,30 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:padding="20dp"
-    >
+    android:paddingHorizontal="20dp"
+    tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/titleText"
+        android:id="@+id/titleTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="안녕하세요."
-        android:visibility="visible"/>
-
+        android:text="안녕하세요." />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="안녕하세요."
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,102 +40,112 @@
 
     </LinearLayout>
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="안녕하세요."
-        android:textColor="#0000ff"
-        android:textSize="30sp"
-        android:textStyle="italic"
         android:layout_gravity="center"
-        />
+        android:background="#000000"
+        android:text="안녕하세요."
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
-<!--    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/testt"
-        android:scaleType="center"
-        />-->
-
-    <!--사용자에게 정보 받을거!!-->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="이메일을 입력해주세요."
-        android:singleLine="true"
         android:maxLines="1"
-        android:imeOptions="actionNone"
+        android:imeOptions="actionNext"
         android:inputType="textEmailAddress"
         />
 
-    <!--android:imeOptions="actionNext" 이건 글자 입력시 엔터키를 변경해준다-->
-
-    <!--비밀번호-->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="비밀번호를 입력해주세요."
-        android:singleLine="true"
         android:maxLines="1"
-        android:imeOptions="actionNext"
+        android:imeOptions="actionSearch"
         android:inputType="textPassword"
         />
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자동로그인"/>
 
-<!--    <EditText
+    <!--    RadioButton은 항상 RadioGroup의 내부 구성품으로 활용-->
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="1번"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="2번"/>
+
+    <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="전화번호"
-        android:singleLine="true"
-        android:maxLines="1"
-        android:inputType="number"
-        />-->
+        android:orientation="horizontal"
+        android:gravity="center|start">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#88FF0000"
+            android:text="1번"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2번"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="중복 검사" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="로그인"
+        android:layout_marginVertical="20dp"
         android:backgroundTint="#000000"
-        />
+        android:text="로그인" />
+
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SignUp"
-        android:textAllCaps="false"
-        android:enabled="false"
-        />
-    <!--소문자 사용하고 싶으면 android:textAllCaps="false"-->
-    <!--버튼 죽이기 android:enabled="false"-->
-
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="자동 로그인"/>
-
-    <!--레디오는 그룹안에서 사용해야 한다-->
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        >
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1번"
-            />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2번"
-            />
-        <!--android:visibility="gone" 숨기기 숨기기(자리 차지X)-->
-        <!--android:visibility="invisible" 숨기기(자리는 차지O)-->
-
-    </RadioGroup>
+        android:textAllCaps="false"/>
 
 
 </LinearLayout>
